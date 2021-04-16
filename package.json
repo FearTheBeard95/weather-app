@@ -1,0 +1,27 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "webserver for weather-app built using express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FearTheBeard95/weather-app.git"
+  },
+  "author": "carlos sibalatani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FearTheBeard95/weather-app/issues"
+  },
+  "homepage": "https://github.com/FearTheBeard95/weather-app#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta3",
+    "chalk": "^4.1.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "jquery": "^3.6.0",
+    "postman-request": "*"
+  }
+}

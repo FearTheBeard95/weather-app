@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>weather app</title>
+  <link rel="icon" href="/img/weather.png">
+  {{>bootstrap}}
+  {{>style}}
+</head>
+
+<body>
+  <div class="main-content">
+    {{>header}}
+    <p>Use this site to get your weather content</p>
+
+    <form class="entry_search" id="entry_search" action="/search" accept-charset="UTF-8" method="get">
+      <div class="form-group">
+        <div class="field">
+          <div class="input-group">
+            <input class="form-control border-0 session-form password-format-input" placeholder="location" type="search"
+              name="q[from_or_to_cont]" id="q_from_or_to_cont">
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="weather-info">
+      <div class="card">
+        <div class="card-header" id="header">
+          Forecast
+        </div>
+        <div class="card-body">
+          <h5 class="card-title" id="title">Special title treatment</h5>
+          <p class="card-text" id="text">With supporting text below as a natural lead-in to additional content.</p>
+          {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+  <script src='/js/app.js'></script>
+</body>
+
+</html>
