@@ -1,6 +1,10 @@
 {
   "name": "web-server",
   "version": "1.0.0",
+  "engines": {
+    "node": "15.x",
+    "npm": "7.x"
+  },
   "description": "webserver for weather-app built using express.js",
   "main": "index.js",
   "scripts": {

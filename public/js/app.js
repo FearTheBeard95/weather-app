@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (e) => {
                 return text.textContent = data.error
             }
             title.textContent = data.location
-            text.textContent = 'The weather is ' + data.weatherDescription + ', the temperature is ' + data.temperature + ' degrees fahrenheit but it feels like ' + data.feelslike + ' degrees fahrenheit'
+            text.textContent = 'The weather is ' + data.weatherDescription + ', the temperature is ' + data.temperature + ' degrees fahrenheit but it feels like ' + data.feelslike + ' degrees fahrenheit out. The humidity is '+data.humidity+'% and the wind direction is '+data.windDirection
 
         })
     })
