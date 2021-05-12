@@ -8,7 +8,8 @@
   "description": "webserver for weather-app built using express.js",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,8 @@
     "hbs": "^4.1.1",
     "jquery": "^3.6.0",
     "postman-request": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
