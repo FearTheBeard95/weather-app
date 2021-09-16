@@ -6,7 +6,7 @@ export const getWeather = (weather) => ({
 
 export const startGetWeather = (place = '') => {
     return async (dispatch) => {
-        const response = await fetch(`http://localhost:3001/weather?address=?${place}`)
+        const response = await fetch(`https://carlos-weather-app.herokuapp.com/weather?address=?${place}`)
         const body = await response.json()
 
         const weather = {
