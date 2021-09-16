@@ -8,8 +8,8 @@
   "description": "webserver for weather-app built using express.js",
   "main": "index.js",
   "scripts": {
-    "start": "node Server/src/app.js",
-    "build": "cd Client && npm install && npm run build"
+    "start": "node src/app.js",
+    "build": "cd ../Client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
