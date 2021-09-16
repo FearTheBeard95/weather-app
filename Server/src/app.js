@@ -5,7 +5,7 @@ const geocode = require('../utils/geocode')
 const forecast = require('../utils/forecast')
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 
 const publicDirectory = path.join(__dirname, '../public')
 const viewPath = path.join(__dirname, '../templates/views')
@@ -30,7 +30,7 @@ app.get('',(req, res) =>{
     })
 })
 app.get('/weather', (req,res) => {
-    
+    res.header("Access-Control-Allow-Origin", "*")
     if (!req.query.address) {
         return res.send({
             error: 'You must provide an address'
@@ -42,18 +42,14 @@ app.get('/weather', (req,res) => {
                 error
             })
         }
-        forecast.forecast(latitude,longitude, (error, {temperature, feelslike, weatherDescription, humidity, windDirection}) => {
+        forecast.forecast(latitude,longitude, (error, {weatherData}) => {
             if (error) {
                 return res.send({
                 })
             }
             res.send({
                 location,
-                temperature,
-                feelslike,
-                weatherDescription,
-                humidity,
-                windDirection
+                weatherData
             })
         })
     })
