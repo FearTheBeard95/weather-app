@@ -21,13 +21,11 @@ app.use(express.static(publicDirectory))
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
+const clientAppPath = path.join(__dirname, '../Client/build/index.html')
 
 //render homepage
 app.get('',(req, res) =>{
-    res.render('index',{
-        title: 'Weather App',
-        name: 'Carlos Sibalatani'
-    })
+    res.sendFile(clientAppPath)
 })
 app.get('/weather', (req,res) => {
     res.header("Access-Control-Allow-Origin", "*")
