@@ -1,5 +1,4 @@
 const weatherReducerDefaultState = {
-    weatherData: {
         main: {
             feels_like: 0,
             humidity: 0,
@@ -24,20 +23,13 @@ const weatherReducerDefaultState = {
             deg: 0,
             speed: 0
         }
-    },
-    exetendedWeatherData: [],
-    isError: false
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state = weatherReducerDefaultState, action) => {
     switch (action.type) {
         case 'SET_WEATHER':
-            console.log(action.weather)
-            return state = {
-                ...state,
-                ...action.weather
-            }
+            return state = action.weather
         default:
             return state
     }

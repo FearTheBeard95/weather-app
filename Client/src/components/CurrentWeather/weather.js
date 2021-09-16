@@ -21,7 +21,6 @@ import { connect } from 'react-redux';
 const TodaysWeather = (props) => {
   const data = props.weather
   console.log(props)
-
   return (
     <WeatherContainer>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
